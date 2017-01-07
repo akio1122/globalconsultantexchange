@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites errors="0" failures="0" skipped="0" tests="81" time="5.29060576" timestamp="2016-02-15T00:48:20-05:00">
+  <testsuite name="TravelAuthorization" tests="7" errors="0" failures="0" skipped="0">
+    <properties/>
+    <testcase name="TravelAuthorization should be valid" time="0.003012307">
+    </testcase>
+    <testcase name="TravelAuthorization behaves like lookup label should require label to be set" time="0.00770236">
+    </testcase>
+    <testcase name="TravelAuthorization behaves like lookup label should require unique value for label" time="0.016997489">
+    </testcase>
+    <testcase name="TravelAuthorization behaves like lookup label should ensure label has a length of at most 256" time="0.007073424">
+    </testcase>
+    <testcase name="TravelAuthorization behaves like lookup code should require code to be set" time="0.006279722">
+    </testcase>
+    <testcase name="TravelAuthorization behaves like lookup code should require unique value for code" time="0.00764166">
+    </testcase>
+    <testcase name="TravelAuthorization behaves like lookup code should ensure code has a length of at most 32" time="0.033919031">
+    </testcase>
+  </testsuite>
+  <testsuite name="ConversationsController" tests="14" errors="0" failures="0" skipped="0">
+    <properties/>
+    <testcase name="ConversationsController logged in as User message strong_params should permit POST #reply to receive parameters :message" time="0.495982165">
+    </testcase>
+    <testcase name="ConversationsController logged in as User conversation strong_params should permit POST #create to receive parameters :subject and :message" time="0.072790569">
+    </testcase>
+    <testcase name="ConversationsController logged in as User GET show assigns a new message as @message" time="0.089213028">
+    </testcase>
+    <testcase name="ConversationsController logged in as User GET show should respond with 200" time="0.064667072">
+    </testcase>
+    <testcase name="ConversationsController logged in as User GET show should render template show" time="0.066877055">
+    </testcase>
+    <testcase name="ConversationsController logged in as User GET show should not redirect to /users/login" time="0.06596387">
+    </testcase>
+    <testcase name="ConversationsController logged in as User GET new assigns a new form as @form" time="0.041812004">
+    </testcase>
+    <testcase name="ConversationsController logged in as User GET new should respond with 200" time="0.037632367">
+    </testcase>
+    <testcase name="ConversationsController logged in as User GET new should render template new" time="0.036835771">
+    </testcase>
+    <testcase name="ConversationsController logged in as User GET new should not redirect to /users/login" time="0.038780232">
+    </testcase>
+    <testcase name="ConversationsController logged in as User GET index assigns new messages as @messages" time="0.047635649">
+    </testcase>
+    <testcase name="ConversationsController logged in as User POST create with valid params creates a new Conversation" time="0.073571319">
+    </testcase>
+    <testcase name="ConversationsController logged in as User POST create with valid params should redirect to /conversations/7" time="0.073488648">
+    </testcase>
+    <testcase name="ConversationsController logged in as User POST create with valid params should not redirect to /users/login" time="0.067380946">
+    </testcase>
+  </testsuite>
+  <testsuite name="User" tests="22" errors="0" failures="0" skipped="0">
+    <properties/>
+    <testcase name="User should have many shared_contacts dependent =&gt; destroy" time="0.006843753">
+    </testcase>
+    <testcase name="User should be valid" time="0.00586529">
+    </testcase>
+    <testcase name="User should have one owned_company" time="0.003368929">
+    </testcase>
+    <testcase name="User should belong to company" time="0.002605208">
+    </testcase>
+    <testcase name="User should have many projects dependent =&gt; destroy" time="0.006065161">
+    </testcase>
+    <testcase name="User last_name should ensure last_name has a length of at least 2" time="0.012756682">
+    </testcase>
+    <testcase name="User last_name should require last_name to be set" time="0.012113703">
+    </testcase>
+    <testcase name="User last_name should not allow last_name to be set to &quot;!@\#$&quot;" time="0.008155583">
+    </testcase>
+    <testcase name="User last_name should allow last_name to be set to &quot;John 123567&quot;" time="0.005006779">
+    </testcase>
+    <testcase name="User last_name should ensure last_name has a length of at most 24" time="0.012950828">
+    </testcase>
+    <testcase name="User first_name should ensure first_name has a length of at least 2" time="0.013392285">
+    </testcase>
+    <testcase name="User first_name should require first_name to be set" time="0.012109297">
+    </testcase>
+    <testcase name="User first_name should not allow first_name to be set to &quot;!@\#$&quot;" time="0.008449882">
+    </testcase>
+    <testcase name="User first_name should allow first_name to be set to &quot;james&quot;" time="0.006103373">
+    </testcase>
+    <testcase name="User first_name should ensure first_name has a length of at most 24" time="0.013632176">
+    </testcase>
+    <testcase name="User first_name should allow first_name to be set to &quot;1234567&quot;" time="0.005557895">
+    </testcase>
+    <testcase name="User first_name should allow first_name to be set to &quot;billy-jean 2&quot;" time="0.005231467">
+    </testcase>
+    <testcase name="User associations as owner should not be deleted" time="0.027473459">
+    </testcase>
+    <testcase name="User associations company as user should not delete company on destroy" time="0.042319085">
+    </testcase>
+    <testcase name="User gces? returns true" time="0.003954749">
+    </testcase>
+    <testcase name="User gces? returns false" time="0.002771145">
+    </testcase>
+    <testcase name="User email should require email to be set" time="0.009661315">
+    </testcase>
+  </testsuite>
+  <testsuite name="ConsultantSkill" tests="4" errors="0" failures="0" skipped="0">
+    <properties/>
+    <testcase name="ConsultantSkill should be valid" time="0.020039535">
+    </testcase>
+    <testcase name="ConsultantSkill consultant should not be valid" time="0.012745732">
+    </testcase>
+    <testcase name="ConsultantSkill skill_id should be unique" time="0.016467483">
+    </testcase>
+    <testcase name="ConsultantSkill skill_id should not be valid" time="0.012393262">
+    </testcase>
+  </testsuite>
+  <testsuite name="DownloadsController" tests="3" errors="0" failures="0" skipped="0">
+    <properties/>
+    <testcase name="DownloadsController logged out download_resume should redirect to /sales_leads/new" time="0.028612983">
+    </testcase>
+    <testcase name="DownloadsController logged in as Owner download_resume should redirect to consultants/21/resume.pdf" time="0.042370225">
+    </testcase>
+    <testcase name="DownloadsController logged in as GCES user download_resume should redirect to consultants/22/resume.pdf" time="0.039238599">
+    </testcase>
+  </testsuite>
+  <testsuite name="UploadImageForm" tests="3" errors="0" failures="0" skipped="0">
+    <properties/>
+    <testcase name="UploadImageForm should require profile_image to be set" time="0.367202499">
+    </testcase>
+    <testcase name="UploadImageForm should be valid" time="0.291890592">
+    </testcase>
+    <testcase name="UploadImageForm behaves like upload_image profile_image should respond to #profile_image" time="0.27283883">
+    </testcase>
+  </testsuite>
+  <testsuite name="Military" tests="18" errors="0" failures="0" skipped="0">
+    <properties/>
+    <testcase name="Military should be valid" time="0.031328258">
+    </testcase>
+    <testcase name="Military associations service_branch should not be destroyed on delete" time="0.031521728">
+    </testcase>
+    <testcase name="Military associations consultant should not be destroyed on delete" time="0.031410968">
+    </testcase>
+    <testcase name="Military associations consultant should be present" time="0.054627733">
+    </testcase>
+    <testcase name="Military associations clearance_level should not be destroyed on delete" time="0.032297632">
+    </testcase>
+    <testcase name="Military associations rank should not be destroyed on delete" time="0.030388342">
+    </testcase>
+    <testcase name="Military behaves like indexable not approved #destroy should not add a job to queue" time="0.03429579">
+    </testcase>
+    <testcase name="Military behaves like indexable not approved #destroy should not start a job" time="0.031028022">
+    </testcase>
+    <testcase name="Military behaves like indexable not approved #update should not add a job to queue" time="0.03129521">
+    </testcase>
+    <testcase name="Military behaves like indexable not approved #update should not start a job" time="0.033938858">
+    </testcase>
+    <testcase name="Military behaves like indexable not approved #create should not add a job to queue" time="0.029631817">
+    </testcase>
+    <testcase name="Military behaves like indexable not approved #create should not start a job" time="0.029840861">
+    </testcase>
+    <testcase name="Military behaves like indexable approved #destroy should add a job to queue" time="0.031952731">
+    </testcase>
+    <testcase name="Military behaves like indexable approved #destroy should start a job" time="0.031348794">
+    </testcase>
+    <testcase name="Military behaves like indexable approved #update should add a job to queue" time="0.032004197">
+    </testcase>
+    <testcase name="Military behaves like indexable approved #update should start a job" time="0.032076347">
+    </testcase>
+    <testcase name="Military behaves like indexable approved #create should add a job to queue" time="0.029613635">
+    </testcase>
+    <testcase name="Military behaves like indexable approved #create should start a job" time="0.030031513">
+    </testcase>
+  </testsuite>
+  <testsuite name="Branch" tests="7" errors="0" failures="0" skipped="0">
+    <properties/>
+    <testcase name="Branch should be valid" time="0.003544424">
+    </testcase>
+    <testcase name="Branch behaves like lookup label should require label to be set" time="0.007161729">
+    </testcase>
+    <testcase name="Branch behaves like lookup label should require unique value for label" time="0.008637734">
+    </testcase>
+    <testcase name="Branch behaves like lookup label should ensure label has a length of at most 256" time="0.007541612">
+    </testcase>
+    <testcase name="Branch behaves like lookup code should require code to be set" time="0.006683991">
+    </testcase>
+    <testcase name="Branch behaves like lookup code should require unique value for code" time="0.008872578">
+    </testcase>
+    <testcase name="Branch behaves like lookup code should ensure code has a length of at most 32" time="0.007348698">
+    </testcase>
+  </testsuite>
+  <testsuite name="Background" tests="2" errors="0" failures="0" skipped="0">
+    <properties/>
+    <testcase name="Background should be valid" time="0.019825416">
+    </testcase>
+    <testcase name="Background consultant should be present" time="0.012512224">
+    </testcase>
+  </testsuite>
+  <testsuite name="ProjectHistoryPosition" tests="1" errors="0" failures="0" skipped="0">
+    <properties/>
+    <testcase name="ProjectHistoryPosition should respond to #percentage" time="0.065921005">
+    </testcase>
+  </testsuite>
+</testsuites>

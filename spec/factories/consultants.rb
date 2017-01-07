@@ -1,0 +1,61 @@
+# Read about factories at https://github.com/thoughtbot/factory_girl
+
+FactoryGirl.define do
+  factory :consultant do
+    abstract              { Faker::Lorem.paragraph(4) }
+    contract_effective_date { DateTime.now }
+
+    trait :with_resume do
+      after(:create) do |c|
+        c.resume_file_name = 'a_pdf.pdf'
+        c.save
+      end
+    end
+
+    trait :approved do
+      after(:create) do |c|
+        c.approved_status = ApprovedStatus.find_by_code(ApprovedStatus::APPROVED[:code])
+        c.save
+      end
+    end
+
+    trait :in_progress do
+      after(:create) do |c|
+        c.approved_status = ApprovedStatus.find_by_code(ApprovedStatus::IN_PROGRESS[:code])
+        c.save
+      end
+    end
+
+    trait :rejected do
+      after(:create) do |c|
+        c.approved_status = ApprovedStatus.find_by_code(ApprovedStatus::REJECTED[:code])
+        c.save
+      end
+    end
+
+    trait :pending_approval do
+      after(:create) do |c|
+        c.approved_status = ApprovedStatus.find_by_code(ApprovedStatus::PENDING_APPROVAL[:code])
+        c.save
+      end
+    end
+
+    trait :on_hold do
+      after(:create) do |c|
+        c.approved_status = ApprovedStatus.find_by_code(ApprovedStatus::ON_HOLD[:code])
+        c.save
+      end
+    end
+
+    trait :wicked_finish do
+      after(:build) do |c|
+        c.wizard_step = Wicked::FINISH_STEP
+        c.save
+      end
+    end
+  end
+
+  factory :confirmed_consultant, parent: :consultant do
+    # before(:create) { |consultant| consultant.skip_confirmation! }
+  end
+end
